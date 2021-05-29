@@ -20,9 +20,7 @@ channel: "$getServerVar[hgbbkanal]", //channel where it will log
 code: `> <@$authorID> $serverName sunucusuna Hoş geldin.
 $attachment[https://cdn.discordapp.com/attachments/841059008927498277/848297449239347200/indir.jpg]
 $channelSendMessage[$getServerVar[sayaçkanal];> \`$usertag\` seninle birlikte $membersCount kişiyiz. $getServerVar[sayaç] kişi olmamıza $sub[$getServerVar[sayaç];$membersCount] kişi kaldı.]
-$channelSendMessage[$getServerVar[otorolkanal];> \`$usertag\` aramıza \`$roleName\`]
-
-
+$channelSendMessage[$getServerVar[otorolkanal];> \`$usertag\` aramıza \`$roleName[$getServerVar[otorol]]\` rolü ile katıdı.]
 ` //Message sent to <channel>
 })
 
