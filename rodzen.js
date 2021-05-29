@@ -14,7 +14,14 @@ for(const file of reader) {
     })
 }
 
-
+bot.command({
+  name:"yardım",
+  code:`
+  $description[]
+  
+  
+  `
+})
 
 
 
