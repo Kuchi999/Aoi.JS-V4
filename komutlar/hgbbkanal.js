@@ -9,7 +9,7 @@ module.exports = {
         $endif
         $if[$message[1]==sıfırla]
         if[$message[1]==ayarla]
-        $setServerVar[hgbbkanal;yok]
+        $resetServerVar[hgbbkanal;$guildID]
         > Hoşgeldin Bay bay kanalı sıfırlandı.
         > Sıfılayan yetkili: $username
         $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]

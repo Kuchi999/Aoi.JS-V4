@@ -14,3 +14,12 @@ for(const file of reader) {
     })
 }
 
+
+
+
+
+
+bot.variables({
+    hgbbkanal: "yok",
+    Sayaç: "0"
+  })
