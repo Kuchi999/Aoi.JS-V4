@@ -1,27 +1,27 @@
 module.exports = {
         name: "otorol",//Buraya Kod İsmi Yazılır
         code: `$if[$message[1]==yardım]
-        > __**SAYAÇ YARDIM**__
-        > !otorol kanal \`Sayaç kanalı ayarlar.\`
-        > !otorol ayarla \`Sayaç sayısını ayarlar.\`
-        > !otorol sıfırla \`Sayaçı sıfırlar.\`
+        > __**OTOROL YARDIM**__
+        > !otorol kanal \`Otorol kanalı ayarlar.\`
+        > !otorol ayarla \`Otorol sayısını ayarlar.\`
+        > !otorol sıfırla \`Otorolü sıfırlar.\`
         $endif
         $if[$message[1]==ayarla]
-        $setServerVar[sayaç;$message[2]]
-        > Otorol başarılı bir şekilde 
+        $setServerVar[otorol;$rolName[$mentionedRoles[1]]
+        > Otorol başarılı bir şekilde __$rolName[$mentionedRoles[1]]
         > Ayarlayan yetkili: $username
           $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif
         $if[$message[1]==kanal]
-        $setServerVar[sayaçkanal;$mentionedChannel[1;yes]]
-        > Sayaç kanalı başarılı bir şekilde <#$get$setServerVar[sayaçkanal]> olarak ayarlandı.
+        $setServerVar[otorolkanal;$mentionedChannels[1;yes]]
+        > Otorol kanalı başarılı bir şekilde <#$get$setServerVar[sayaçkanal]> olarak ayarlandı.
         > Ayarlayan yetkili: $username
         $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif
         $if[$message[1]==sıfırla]
-        $resetServerVar[sayaç;$guildID]
-        $resetServerVar[sayaçkanal;$guildID]
-        > Sayaç ve sayaç kanalı sıfırlandı.
+        $resetServerVar[otorol;$guildID]
+        $resetServerVar[otorolkanal;$guildID]
+        > Otorol ve otorol kanalı sıfırlandı.
         > Sıfılayan yetkili: $username 
         $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif

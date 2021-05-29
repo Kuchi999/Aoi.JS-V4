@@ -4,6 +4,8 @@ const bot = new rodzen.Bot({
     token:process.env.token,
     prefix:"!"
 })
+bot.onJoined()
+bot.onLeave()
 bot.onMessage()
 var reader = fs.readdirSync("./komutlar/").filter(file => file.endsWith(".js"))
 for(const file of reader) {    
@@ -13,6 +15,20 @@ for(const file of reader) {
         code: command.code
     })
 }
+bot.joinCommand({ //command
+channel: "$getServerVar[hgbbkanal]", //channel where it will log
+code: `
+
+
+
+
+
+` //Message sent to <channel>
+})
+
+
+
+
 
 bot.command({
   name:"yardım",
@@ -32,8 +48,9 @@ bot.command({
 
 
 bot.variables({
-    hgbbkanal: "yok",
+    hgbbkanal: "ayarlanmamış",
     sayaç: "0",
-    sayaçkanal: "yok",
-  
+    sayaçkanal: "ayarlanmamış",
+    otorol:"ayarlanmamış",
+  otorolkanal:"ayarlanmamış",
   })

@@ -2,7 +2,7 @@ module.exports = {
         name: "hgbbkanal",//Buraya Kod İsmi Yazılır
         code: `
         $if[$message[1]==ayarla]
-        $setServerVar[hgbbkanal;$mentionedChannel[1;yes]]
+        $setServerVar[hgbbkanal;$mentionedChannels[1;yes]]
         > Hoşgeldin Bay bay kanalı ayarlandı.
         > Ayarlayan yetkili: $username
         $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]

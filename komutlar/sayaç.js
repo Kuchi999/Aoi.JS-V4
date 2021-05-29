@@ -13,7 +13,7 @@ module.exports = {
           $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif
         $if[$message[1]==kanal]
-        $setServerVar[sayaçkanal;$mentionedChannel[1;yes]]
+        $setServerVar[sayaçkanal;$mentionedChannels[1;yes]]
         > Sayaç kanalı başarılı bir şekilde <#$get$setServerVar[sayaçkanal]> olarak ayarlandı.
         > Ayarlayan yetkili: $username
         $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
