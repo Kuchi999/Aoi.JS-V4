@@ -16,8 +16,14 @@ for(const file of reader) {
 
 bot.command({
   name:"yardım",
-  code:`
-  $description[]
+  code:`$author[Yardım Menüm;]
+  $description[
+  !ayarlamalı
+  !yetkili
+  !kullanıcı
+  !ekonomi
+  !bot
+  ]
   
   
   `
