@@ -12,6 +12,7 @@ module.exports = {
           $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif
         $if[$message[1]==kanal]
-        $setServerVar[]
+        $setServerVar[sayaçkanal;$mentionedChannel[1;yes]]
+        > Sayaç kanalı başarılı 
         `//Buraya Kodunuzu Yazınız
 }
