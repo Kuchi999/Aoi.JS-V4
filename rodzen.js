@@ -17,15 +17,14 @@ for(const file of reader) {
 bot.command({
   name:"yardım",
   code:`$author[Yardım Menüm;]
-  $description[
+  $description[$thumbnail[$authorAvatar]
   !ayarlamalı
   !yetkili
   !kullanıcı
   !ekonomi
   !bot
   ]
-  
-  
+  $color[303136]
   `
 })
 
@@ -34,5 +33,7 @@ bot.command({
 
 bot.variables({
     hgbbkanal: "yok",
-    Sayaç: "0"
+    sayaç: "0",
+    sayaçkanal: "yok",
+  
   })
