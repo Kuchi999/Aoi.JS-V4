@@ -1,8 +1,8 @@
 module.exports = {
-  name:"mutekapat",
+  name:"jailkapat",
   code:`
   Mute Rol Kapatıldı
-  $setServerVar[mrol;yok]
+  $setServerVar[jrol;yok]
   $onlyPerms[admin;Sunucuda Yönetici Yetkiniz Yok ! ]
   $onlyBotPerms[admin;Sunucuda Yönetici Yetkim Yok]`
 }

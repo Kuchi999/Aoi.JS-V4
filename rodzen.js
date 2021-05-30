@@ -65,9 +65,10 @@ bot.command({
   > !ban @etiket sebep - !ban <@$authorID> örnek
   > !unban ID - !unban $authorID
   > !kick @etiket - !kick <@$authorID>
-  > !mute @etiket süre - !mute <@$authorID> 1m
+  > !mute @etiket süre - !mute <@$authorID> 10m
   > !unmute @etiket - !unmute <@$authorID>
-  > !jail @etiket süre - 
+  > !jail @etiket  - !jail <@$authorID>
+  > !unjail @etiket - !unjail <@$authorID>
   `
 })
 

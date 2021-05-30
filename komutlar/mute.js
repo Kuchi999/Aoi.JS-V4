@@ -10,7 +10,7 @@ module.exports = {
  $onlyIf[$noMentionMessage!=;Süre Belirt
 1s, 1m , 1h Vesaire]
   $onlyBotPerms[manageroles;Rolleri Yönet Yetkim Yok Rolü Veremedim !]
-  $onlyIf[$mentioned[1]!=;Kimi Mutelemem Gerektiğini Etiketle !]
-  $onlyIf[$checkContains[$getServerVar[mrol];yok]!=true;Yetkili Rol Yada Mute Rol Ayarlanmamış.]
+  $onlyIf[$mentioned[1]!=;Kimi Jaile Gerektiğini Etiketle !]
+  $onlyIf[$checkContains[$getServerVar[mrol];yok]!=true;Mute Rol Ayarlanmamış.]
   `}
  
