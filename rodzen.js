@@ -67,4 +67,6 @@ bot.variables({
     sayaçkanal: "ayarlanmamış",
     otorol:"ayarlanmamış",
   otorolkanal:"ayarlanmamış",
+  mrol:"yok",
+  myetkili:"yok",
   })
