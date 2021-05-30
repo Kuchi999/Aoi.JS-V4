@@ -1,11 +1,10 @@
 module.exports = {
-        name: "ban",//Buraya Kod İsmi Yazılır
+        name: "kick",//Buraya Kod İsmi Yazılır
         code: `
-        $ban[$mentioned[1];$noMentionMessage]
-        > \`$usertag[$mentioned[1]]\` kişisi sunucudan banlandı.
+        $kick[$mentioned[1]]
+        > \`$usertag[$mentioned[1]]\` kişisi sunucudan atıldı.
         > Sebebi: \`$replaceText[$noMentionMessage; ;Sebep belirtilmemiş]\`
-        > Banlayan yetkili: \`$usertag\`
-        > Sunucudaki banlı kişi sayısı: \`$banCount\`
+        > Atan yetkili: \`$usertag\`
         $onlyIf[$message!=;Birini etiketle ve sebebi yaz.]
         $onlyPerms[ban;Bunun için \`Yasakla\` yetkisi lazım.]
         `//Buraya Kodunuzu Yazınız
