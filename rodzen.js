@@ -70,17 +70,16 @@ bot.command({
 bot.command({
   name:"ayarlamalı",
   code:`
-  __**Yetkili Komutları**__
+  __**Ayarlamalı Yetkili Komutları**__
   > !hgbbkanal ayarla/sıfırla - !hgbbkanal ayarla #kanal | !hgbbkanal sıfırla
   > !sayaç yardım/ayarla/sıfırla - !sayaç ayarla hedef | !sayaç kanal #kanal | !sayaç sıfırla
   > !otorol yardım/ayarla/sıfırla - !otorol ayarla @rol | !otorol kanal #kanal | !otorol sıfırla
-  > !mute @etiket süre - !mute <@$authorID> 10m
-  > !unmute @etiket - !unmute <@$authorID>
-  > !jail @etiket  - !jail <@$authorID>
-  > !unjail @etiket - !unjail <@$authorID>
+  > !muterol - !muterol @rol
+  > !mutekapat - !mutekapat
+  > !jailrol - !jailrol @rol
+  > !jailkapat - jailkapat
   `
 })
-
 
 bot.variables({
     hgbbkanal: "ayarlanmamış",
