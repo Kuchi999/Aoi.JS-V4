@@ -46,15 +46,12 @@ code: `> :white_check_mark:** \`$usertag\` seniz\`$membersCount\` kişi kaldık.
 
 bot.command({
   name:"yardım",
-  code:`$author[Yardım Menüm;]
-  $description[$thumbnail[$authorAvatar]
-  !ayarlamalı
-  !yetkili - \`Yetkili komutlarını gösterir.\`
-  !kullanıcı
-  !ekonomi
-  !bot
-  ]
-  $color[303136]
+  code:`__**Yardım**__
+  > !ayarlamalı - \`Ayarlamalı komutları gösterir.\`
+  > !yetkili - \`Yetkili komutlarını gösterir.\`
+  > !kullanıcı - \`Kullanıcı komutlarını gösterir.\`
+  > !ekonomi - \`Ekonomi komutlarını gösterir.\`
+  > !bot - \`Bot komutlarını gösterir.\`
   `
 })
 

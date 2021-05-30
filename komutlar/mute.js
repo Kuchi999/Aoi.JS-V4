@@ -1,7 +1,7 @@
 module.exports = {
   name:"mute",
   code:`
-  $username[$mentioned[1]]#$discriminator[$mentioned[1]] Kişisinin Mutesi bitti
+  > $username[$mentioned[1]]#$discriminator[$mentioned[1]] Kişisinin Mutesi bitti
  $takeRoles[$mentioned[1];$getServerVar[mrol]]
  $wait[$noMentionMessage
  $giveRoles[$mentioned[1];$getServerVar[mrol]]
