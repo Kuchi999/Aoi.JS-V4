@@ -1,6 +1,6 @@
 module.exports = ({
  name: "ascii",
- code: ` \`\`\`
- $httpRequest[https://artii.herokuapp.com/make?text=$replaceText[$message; ;+]]\`\`\`
+ code: ` $deletecommand
+$attachment[https://dummyimage.com/2000x500/33363c/FFFFFF&text=$replaceText[$message; ;+;-1]]
 `
 })

@@ -51,6 +51,7 @@ bot.command({
   > !yetkili - \`Yetkili komutlarını gösterir.\`
   > !kullanıcı - \`Kullanıcı komutlarını gösterir.\`
   > !ekonomi - \`Ekonomi komutlarını gösterir.\`
+  > !eğlence - \`Eğlence komutlarını gösterir.\`
   > !bot - \`Bot komutlarını gösterir.\`
   `
 })
@@ -76,6 +77,19 @@ bot.command({
   > !otorol yardım/ayarla/sıfırla - !otorol ayarla @rol | !otorol kanal #kanal | !otorol sıfırla
   > !muterol - !muterol @rol
   > !mutekapat - !mutekapat
+  > !jailrol - !jailrol @rol
+  > !jailkapat - jailkapat
+  `
+})
+bot.command({
+  name:"eğlence",
+  code:`
+  __**Eğlence Komutları**__
+  > !ascii - !ascii mesaj
+  > !aşkölçer - !aşkölçer @üye
+  > !banner - !banner mesaj
+  > !recaptcha - !recaptcha mesaj
+  > !şifre 
   > !jailrol - !jailrol @rol
   > !jailkapat - jailkapat
   `
