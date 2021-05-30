@@ -68,12 +68,12 @@ bot.command({
   `
 })
 bot.command({
-  name:"yetkili",
+  name:"ayarlamalı",
   code:`
   __**Yetkili Komutları**__
-  > !ban @etiket sebep - !ban <@$authorID> örnek
-  > !unban ID - !unban $authorID
-  > !kick @etiket - !kick <@$authorID>
+  > !hgbbkanal ayarla/sıfırla - !hgbbkanal ayarla #kanal | !hgbbkanal sıfırla
+  > !sayaç yardım/ayarla/sıfırla - !sayaç ayarla hedef | !sayaç kanal #kanal | !sayaç sıfırla
+  > !otorol yardım/ayarla/sıfırla - !otorol ayarla @rol | !otorol kanal #kanal | !otorol sıfırla
   > !mute @etiket süre - !mute <@$authorID> 10m
   > !unmute @etiket - !unmute <@$authorID>
   > !jail @etiket  - !jail <@$authorID>
