@@ -54,7 +54,19 @@ bot.command({
   > !bot - \`Bot komutlarını gösterir.\`
   `
 })
-
+bot.command({
+  name:"yetkili",
+  code:`
+  __**Yetkili Komutları**__
+  > !ban @etiket sebep - !ban <@$authorID> örnek
+  > !unban ID - !unban $authorID
+  > !kick @etiket - !kick <@$authorID>
+  > !mute @etiket süre - !mute <@$authorID> 10m
+  > !unmute @etiket - !unmute <@$authorID>
+  > !jail @etiket  - !jail <@$authorID>
+  > !unjail @etiket - !unjail <@$authorID>
+  `
+})
 bot.command({
   name:"yetkili",
   code:`
