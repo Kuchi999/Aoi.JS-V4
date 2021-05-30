@@ -38,7 +38,7 @@ code: `> **<@$authorID> $serverName sunucusuna Hoş geldin.**
 $attachment[https://api.xzusfin.repl.co/card?avatar=$replaceText[$authorAvatar;.webp;.png; ]&middle=gorusuz&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23; ]; ;%20; ]&bottom=$replaceText[Members Count $membersCount[$guildID]; ;%20;-1]&background=https://cdn.discordapp.com/attachments/837700334011809843/848604293963055124/hd-turk-bayragi-arkaplan-resimleri-23.jpg&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3]
 ` //Message sent to <channel>
 })
-bot.joinCommand({ //command
+bot.leaveCommand({ //command
 channel: "$getServerVar[sayaçkanal]", //channel where it will log
 code: `> :white_check_mark:** \`$usertag\` seniz\`$membersCount\` kişi kaldık. \`[$getServerVar[sayaç]\` kişi olmamıza  \`$sub[$getServerVar[sayaç];$membersCount]\` kişi kaldı.**
 ` //Message sent to <channel>
