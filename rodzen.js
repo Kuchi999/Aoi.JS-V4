@@ -89,9 +89,7 @@ bot.command({
   > !aşkölçer - !aşkölçer @üye
   > !banner - !banner mesaj
   > !recaptcha - !recaptcha mesaj
-  > !şifre 
-  > !jailrol - !jailrol @rol
-  > !jailkapat - jailkapat
+  > !şifre - !şifre
   `
 })
 
