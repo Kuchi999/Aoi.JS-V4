@@ -10,8 +10,7 @@ module.exports = {
         $setServerVar[otorol;$rolName[$mentionedRoles[1]]
         > Otorol başarılı bir şekilde __$rolName[$mentionedRoles[1]]
         > Ayarlayan yetkili: $username
-                $onlyIf[$mentionedChannels[1]!=;Bir Kanal Etiketle. Örnek: \`!hgbbkanal ayarla #kanal\`]
-        $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
+                $onlyIf[$mentionedRoles[1]!=;Bir Kanal Etiketle. Örnek: \`!otorol ayarla @rol\`]
           $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif
         $if[$message[1]==kanal]
@@ -19,6 +18,7 @@ module.exports = {
         > Otorol kanalı başarılı bir şekilde <#$get$setServerVar[sayaçkanal]> olarak ayarlandı.
         > Ayarlayan yetkili: $username
         $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
+           $onlyIf[$mentionedChannels[1]!=;Bir Kanal Etiketle. Örnek: \`!otorol kanal #kanal\`]
         $endif
         $if[$message[1]==sıfırla]
         $resetServerVar[otorol;$guildID]
