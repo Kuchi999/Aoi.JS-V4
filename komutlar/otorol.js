@@ -10,6 +10,8 @@ module.exports = {
         $setServerVar[otorol;$rolName[$mentionedRoles[1]]
         > Otorol başarılı bir şekilde __$rolName[$mentionedRoles[1]]
         > Ayarlayan yetkili: $username
+                $onlyIf[$mentionedChannels[1]!=;Bir Kanal Etiketle. Örnek: \`!hgbbkanal ayarla #kanal\`]
+        $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
           $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif
         $if[$message[1]==kanal]
@@ -25,5 +27,10 @@ module.exports = {
         > Sıfılayan yetkili: $username 
         $onlyPerms[admin;Bunun için \`Yönetici\` yetkisi lazım.]
         $endif
+                $onlyIf[$checkContains[$toLowercase[$message];ayarla;sıfırla;yardım]==true;**Doğru kullanım:**
+        > !otorol ayarla @rol
+        > !otorol sıfırla
+        > !otorol kanal #kanal
+        ]
         `//Buraya Kodunuzu Yazınız
 }
