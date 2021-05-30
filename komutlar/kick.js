@@ -3,9 +3,8 @@ module.exports = {
         code: `
         $kick[$mentioned[1]]
         > \`$usertag[$mentioned[1]]\` kişisi sunucudan atıldı.
-        > Sebebi: \`$replaceText[$noMentionMessage; ;Sebep belirtilmemiş]\`
         > Atan yetkili: \`$usertag\`
-        $onlyIf[$message!=;Birini etiketle ve sebebi yaz.]
-        $onlyPerms[ban;Bunun için \`Yasakla\` yetkisi lazım.]
+        $onlyIf[$message!=;Birini etiketle.]
+        $onlyPerms[kick;Bunun için \`Kullanıcıyı At\` yetkisi lazım.]
         `//Buraya Kodunuzu Yazınız
 }

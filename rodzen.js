@@ -49,7 +49,7 @@ bot.command({
   code:`$author[Yardım Menüm;]
   $description[$thumbnail[$authorAvatar]
   !ayarlamalı
-  !yetkili
+  !yetkili - \`Yetkili komutlarını gösterir.\`
   !kullanıcı
   !ekonomi
   !bot
@@ -58,7 +58,18 @@ bot.command({
   `
 })
 
-
+bot.command({
+  name:"yetkili",
+  code:`
+  __**Yetkili Komutları**__
+  > !ban @etiket sebep - !ban <@$authorID> örnek
+  > !unban ID - !unban $authorID
+  > !kick @etiket - !kick <@$authorID>
+  > !mute @etiket süre - !mute <@$authorID> 1m
+  > !unmute @etiket - !unmute <@$authorID>
+  > !jail @etiket süre - 
+  `
+})
 
 
 bot.variables({
@@ -68,5 +79,5 @@ bot.variables({
     otorol:"ayarlanmamış",
   otorolkanal:"ayarlanmamış",
   mrol:"yok",
-  myetkili:"yok",
+  jrol:"yok",
   })
