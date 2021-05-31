@@ -81,3 +81,10 @@ bot.command({
   $onlyForIDs[$botOwnerID;Bu komut sadece sahibime aittir.]
   `
 })
+
+bot.status({
+    text: `Zuzia RodzeN⁰⁰²`,
+    type: "PLAYING",
+    status: "dnd",
+    time: 12
+})
