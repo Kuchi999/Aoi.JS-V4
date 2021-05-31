@@ -15,6 +15,23 @@ for(const file of reader) {
         code: command.code
     })
 }
+bot.botJoinCommand({//command
+channel: "$randomChannelID",//the channel where <code> will be sent to
+code: `> Prefixim : !
+> Sahibim : $usertag[$botOwnerID]
+> Davet linkim: $getBotInvite
+
+
+`//message sent to <channel>
+})
+bot.musicStartCommand({
+channel:"$channeID",
+code:``
+})
+bot.musicEndCommand({
+channel:"$channeID",
+code:``
+})
 bot.command({
   name:"çal",
   code:`$author[Müzik Çalmaya Başladı;$authorAvatar]
@@ -45,8 +62,22 @@ bot.command({
   !tekrarla - Şarkıyı sıralar.
   !şuan-çalan - Şuan çalan şarkının bilgisini verir.
   !çık - Şarkıyı kapatıp sesten çıkar.
+  !ping - Pingi gösterir.
   ]
 $color[RANDOM]  
   $footer[$usertag istedi...]
+  `
+})
+
+bot.command({
+  name:"ping",
+  code:`
+  Gecikmem : $ping | Bot gecikmesi : $botPing
+  `
+})
+bot.command({
+  name:"eval",
+  code:`$eval[$message]
+  $onlyForIDs[$botOwnerID;Bu komut sadece sahibime aittir.]
   `
 })
