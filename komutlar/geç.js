@@ -1,10 +1,10 @@
 module.exports = {
-        name: "tekrarla",
-        code: `$description[\`$usertag\` Şarkı tekrarlandı.]
+        name: "geç",//Buraya Kod İsmi Yazılır
+        code: `$description[\`$usertag\` Şarkı atlatıldı.]
 $color[RANDOM]
-$let[tekrarla;$loopQueue]
+$let[geç;$skipSong]
 $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
 $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 $suppressErrors[Şarkı çalmazken kullanamazsın]
-        `
+        `//Buraya Kodunuzu Yazınız
 }

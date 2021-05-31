@@ -32,15 +32,18 @@ $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
   `
 })
 
-
-bot.variables({
-    hgbbkanal: "ayarlanmamış",
-    sayaç: "0",
-    sayaçkanal: "ayarlanmamış",
-    otorol:"ayarlanmamış",
-  otorolkanal:"ayarlanmamış",
-  mrol:"yok",
-  jrol:"yok",
-  para:"0",
-  balık:"0"
-  })
+bot.command({
+  name:"yardım",
+  code:`$author[Yardım Menüm]
+  $description[
+  !çal - \`!çal $randomText[back in black;can bonomo - güneş;duman - elleri ellerime]\` - şarkı çalar.
+  !durdur - Şarkıyı durdurur.
+  !devam - Şarkıyı devam etirir.
+  
+  
+  
+  ]
+  
+  
+  `
+})

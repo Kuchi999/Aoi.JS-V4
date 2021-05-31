@@ -1,6 +1,6 @@
 module.exports = {
         name: "durdur",//Buraya Kod İsmi Yazılır
-        code: `$description[Şarkı durduruldu. Durduran kişi: \`$usertag\`]
+        code: `$description[\`$usertag\` Şarkı durduruldu.]
 $pauseSong
 $color[RANDOM]
 $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
