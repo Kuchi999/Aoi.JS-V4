@@ -15,81 +15,18 @@ for(const file of reader) {
         code: command.code
     })
 }
-bot.joinCommand({ //command
-channel: "$getServerVar[hgbbkanal]", //channel where it will log
-code: `> **<@$authorID> $serverName sunucusuna Hoş geldin.**
-$attachment[https://api.xzusfin.repl.co/card?avatar=$replaceText[$authorAvatar;.webp;.png; ]&middle=hosgeldin&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23; ]; ;%20; ]&bottom=$replaceText[Members Count $membersCount[$guildID]; ;%20;-1]&background=https://cdn.discordapp.com/attachments/837700334011809843/848604293963055124/hd-turk-bayragi-arkaplan-resimleri-23.jpg&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3]
-` //Message sent to <channel>
-})
-bot.joinCommand({ //command
-channel: "$getServerVar[sayaçkanal]", //channel where it will log
-code: `> :white_check_mark:** \`$usertag\` senle birlikte \`$membersCount\` kişi olduk. \`[$getServerVar[sayaç]\` kişi olmamıza  \`$sub[$getServerVar[sayaç];$membersCount]\` kişi kaldı.**
-` //Message sent to <channel>
-})
-bot.joinCommand({ //command
-channel: "$getServerVar[otorolkanal]", //channel where it will log
-code: `> :white_check_mark: **\`$usertag\` aramıza __\`$rolName[$getServerVar[otorol]]\`__ rolü ile katıldı.
-$giveRole[$authorID;$getServerVar[otorol]]
-` //Message sent to <channel>
-})
-bot.leaveCommand({ //command
-channel: "$getServerVar[hgbbkanal]", //channel where it will log
-code: `> **<@$authorID> $serverName sunucusuna Hoş geldin.**
-$attachment[https://api.xzusfin.repl.co/card?avatar=$replaceText[$authorAvatar;.webp;.png; ]&middle=gorusuz&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23; ]; ;%20; ]&bottom=$replaceText[Members Count $membersCount[$guildID]; ;%20;-1]&background=https://cdn.discordapp.com/attachments/837700334011809843/848604293963055124/hd-turk-bayragi-arkaplan-resimleri-23.jpg&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3]
-` //Message sent to <channel>
-})
-bot.leaveCommand({ //command
-channel: "$getServerVar[sayaçkanal]", //channel where it will log
-code: `> :white_check_mark:** \`$usertag\` seniz\`$membersCount\` kişi kaldık. \`[$getServerVar[sayaç]\` kişi olmamıza  \`$sub[$getServerVar[sayaç];$membersCount]\` kişi kaldı.**
-` //Message sent to <channel>
-})
-
 bot.command({
-  name:"yardım",
-  code:`__**Yardım**__
-  > !ayarlamalı - \`Ayarlamalı komutları gösterir.\`
-  > !yetkili - \`Yetkili komutlarını gösterir.\`
-  > !kullanıcı - \`Kullanıcı komutlarını gösterir.\`
-  > !ekonomi - \`Ekonomi komutlarını gösterir.\`
-  > !eğlence - \`Eğlence komutlarını gösterir.\`
-  > !bot - \`Bot komutlarını gösterir.\`
-  `
-})
-bot.command({
-  name:"yetkili",
-  code:`
-  __**Yetkili Komutları**__
-  > !ban @etiket sebep - !ban <@$authorID> örnek
-  > !unban ID - !unban $authorID
-  > !kick @etiket - !kick <@$authorID>
-  > !mute @etiket süre - !mute <@$authorID> 10m
-  > !unmute @etiket - !unmute <@$authorID>
-  > !jail @etiket  - !jail <@$authorID>
-  > !unjail @etiket - !unjail <@$authorID>
-  `
-})
-bot.command({
-  name:"ayarlamalı",
-  code:`
-  __**Ayarlamalı Yetkili Komutları**__
-  > !hgbbkanal ayarla/sıfırla - !hgbbkanal ayarla #kanal | !hgbbkanal sıfırla
-  > !sayaç yardım/ayarla/sıfırla - !sayaç ayarla hedef | !sayaç kanal #kanal | !sayaç sıfırla
-  > !otorol yardım/ayarla/sıfırla - !otorol ayarla @rol | !otorol kanal #kanal | !otorol sıfırla
-  > !muterol - !muterol @rol
-  > !mutekapat - !mutekapat
-  > !jailrol - !jailrol @rol
-  > !jailkapat - jailkapat
-  `
-})
-bot.command({
-  name:"eğlence",
-  code:`
-  __**Eğlence Komutları**__
-  > !ascii - !ascii mesaj
-  > !aşkölçer - !aşkölçer @üye
-  > !banner - !banner mesaj
-  > !recaptcha - !recaptcha mesaj
-  > !şifre - !şifre
+  name:"çal",
+  code:`$author[Müzik Çalmaya Başladı;$authorAvatar]
+  $description[Aradığı Müzik: \`$message\`
+  Bulduğum Müzik: $songInfo[title]
+  
+  
+  
+  ]
+  
+  
+  
   `
 })
 
