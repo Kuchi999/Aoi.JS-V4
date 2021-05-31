@@ -39,9 +39,11 @@ bot.command({
   !çal - \`!çal $randomText[back in black;can bonomo - güneş;duman - elleri ellerime]\` - şarkı çalar.
   !durdur - Şarkıyı durdurur.
   !devam - Şarkıyı devam etirir.
-  
-  
-  
+  !geç - Listedeki diğer şarkıya geçer.
+  !ses - \`!ses $random[1;100]\` Şarkının sesini ayarlar.
+  !sıralama - Listedeki şarkıları gösterir.
+  !tekrarla - Şarkıyı sıralar.
+  !çık - Şarkıyı kapatıp sesten çıkar.
   ]
   
   
