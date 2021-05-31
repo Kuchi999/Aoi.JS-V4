@@ -101,4 +101,6 @@ bot.variables({
   otorolkanal:"ayarlanmamış",
   mrol:"yok",
   jrol:"yok",
+  banka:"",
+  para:"",
   })
