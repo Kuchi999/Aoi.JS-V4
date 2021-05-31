@@ -101,5 +101,5 @@ bot.variables({
   otorolkanal:"ayarlanmamış",
   mrol:"yok",
   jrol:"yok",
-  para:"",
+  para:"0",
   })
