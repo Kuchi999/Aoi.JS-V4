@@ -13,10 +13,10 @@ module.exports = {
         $if[$message[1]==kovası]
         > Kovada toplam $getUserVar[balık;$authorID] balık var. Her balıktan 1 $ alsan güzel para.
         $endif
-                $onlyIf[$checkContains[$toLowercase[$message];ayarla;sıfırla]==true;**Doğru kullanım:**
-        > !hgbbkanal ayarla #kanal
-        > !hgbbkanal sıfırla
-        
+                $onlyIf[$checkContains[$toLowercase[$message[1]];tut;sat;kovası]==true;**Doğru Kullanım**
+        > !balık tut
+        > !balık kovası
+        > !balık sat
         ]
         `
 }

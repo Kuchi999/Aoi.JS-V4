@@ -102,4 +102,5 @@ bot.variables({
   mrol:"yok",
   jrol:"yok",
   para:"0",
+  balık:"0"
   })
