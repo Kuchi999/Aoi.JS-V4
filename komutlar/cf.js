@@ -6,7 +6,7 @@ module.exports = {
         $onlyIf[$message[1]<=$getlUserVar[para;$authorID];Paran Yetmiyor !]
   $onlyIf[$isNumber[$message[1]]!=false; Girdiğin Değer Yanlış !]
   $onlyIf[$message[1]>3;3 ve Küçük Değer Giremessin !]
-        
+        $cooldown[1m;1 dakika beklemen lazım dostum.]
         
         
         
