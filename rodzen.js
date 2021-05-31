@@ -35,7 +35,7 @@ $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
 bot.command({
   name:"yardım",
   code:`$author[Yardım Menüm]
-  $description[
+  $description[$thumbnail[$userAvatar[$clientID]]
   !çal - \`!çal $randomText[back in black;can bonomo - güneş;duman - elleri ellerime]\` - şarkı çalar.
   !durdur - Şarkıyı durdurur.
   !devam - Şarkıyı devam etirir.
@@ -43,9 +43,10 @@ bot.command({
   !ses - \`!ses $random[1;100]\` Şarkının sesini ayarlar.
   !sıralama - Listedeki şarkıları gösterir.
   !tekrarla - Şarkıyı sıralar.
+  !şuan-çalan - Şuan çalan şarkının bilgisini verir.
   !çık - Şarkıyı kapatıp sesten çıkar.
   ]
-  
-  
+$color[RANDOM]  
+  $footer[$usertag istedi...]
   `
 })
