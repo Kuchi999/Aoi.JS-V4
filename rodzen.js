@@ -19,16 +19,34 @@ bot.command({
   name:"çal",
   code:`$author[Müzik Çalmaya Başladı;$authorAvatar]
   $description[Aradığı Müzik: \`$message\`
-  Bulduğum Müzik: $songInfo[title]
-  
-  
-  
-  ]
-  
-  
-  
+  Bulduğum Müzik: [$songInfo[title]]($songInfo[url])
+  Müziğin Süresi: $replaceText[$replaceText[$songInfo[duration];Seconds;Saniye;-1];Seconds;Saniye;-1]
+  Müziğin Kısa Açıklaması: \`$songInfo[description]\`
+  Müziği Açan Kişi: [$usertag]($authorAvatar)]
+  $thumbnail[$songInfo[thumbnail]]
+  $let[$playSong[$message;...;yes;yes;:x: __**|** \`$message\`**|**__ adında bir müzik bulamadım.]]
+$suppressErrors[Şarkı çalmazken kullanamazsın]
+$onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
+  $argsCheck[>1;Lütfen bir şarkı adı gir]
+  $color[RANDOM]
   `
 })
+bot.command({
+  name:"sıralama",
+  code:`$author[Şarkı Sıralaması]
+  $description[\`$queue[1;15;{number} - {title}]\`
+  ════════════════════════════════════
+  Şuanda Çalan Müzik: [$songInfo[title]]($songInfo[url])
+  Müziği Açan: $usertag[$songInfo[userID]]]
+  $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
+ $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
+ $onlyIf[$queue[1;15;{number} - {title}]!=;Sırada bir şarkı bulunmuyor]
+ $suppressErrors[Şarkı çalmazken kullanamazsın]
+  
+  `
+  
+})
+
 
 bot.variables({
     hgbbkanal: "ayarlanmamış",
