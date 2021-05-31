@@ -3,7 +3,7 @@ module.exports = {
   code:`
   > $username[$mentioned[1]]#$discriminator[$mentioned[1]] Kişisinin Mutesi bitti
  $takeRoles[$mentioned[1];$getServerVar[mrol]]
- $wait[$noMentionMessage
+ $wait[$noMentionMessage]
  $giveRoles[$mentioned[1];$getServerVar[mrol]]
  $channelSendMessage[$channelID;$usertag Kişisine $noMentionMessage[1] Süresi Boyunca Mutelendi.]
  $onlyIf[$hasRole[$mentioned[1];$getServerVar[mrol]]!=true;Kişi Zaten Muteli !]

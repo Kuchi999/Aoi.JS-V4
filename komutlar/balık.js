@@ -6,13 +6,17 @@ module.exports = {
         $cooldown[10s;10 saniye bekle dostum.]
         $endif
         $if[$message[1]==sat]
-        > Tüm balıklarını sattın.
+        > Tüm balıklarını sattın. Toplam Paran $sum[$getUserVar[para;$authorID];$getUservar[balık;$authorID]] $
         $setUserVar[para;$getUserVar[balık;$authorID];$authorID]
+        $setUserVar[balık;0;$authorID]
+        $endif
+        $if[$message[1]==kovası]
+        > Kovada toplam $getUserVar[balık;$authorID] balık var. Her balıktan 1 $ alsan güzel para.
+        $endif
+                $onlyIf[$checkContains[$toLowercase[$message];ayarla;sıfırla]==true;**Doğru kullanım:**
+        > !hgbbkanal ayarla #kanal
+        > !hgbbkanal sıfırla
         
-        
-        
-        
-        
-        
+        ]
         `
 }
