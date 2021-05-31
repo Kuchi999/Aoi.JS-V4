@@ -2,7 +2,7 @@ const rodzen = require("aoi.js")
 var fs = require('fs')
 const bot = new rodzen.Bot({
     token:process.env.token,
-    prefix:"!"
+    prefix:"!!"
 })
 bot.onJoined()
 bot.onLeave()
