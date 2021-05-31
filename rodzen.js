@@ -31,21 +31,6 @@ $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
   $color[RANDOM]
   `
 })
-bot.command({
-  name:"sıralama",
-  code:`$author[Şarkı Sıralaması]
-  $description[\`$queue[1;15;{number} - {title}]\`
-  ════════════════════════════════════
-  Şuanda Çalan Müzik: [$songInfo[title]]($songInfo[url])
-  Müziği Açan: $usertag[$songInfo[userID]]]
-  $onlyIf[$voiceID[$clientID]!=;Şarkı çalmazken kullanamazsın]
- $onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
- $onlyIf[$queue[1;15;{number} - {title}]!=;Sırada bir şarkı bulunmuyor]
- $suppressErrors[Şarkı çalmazken kullanamazsın]
-  
-  `
-  
-})
 
 
 bot.variables({
