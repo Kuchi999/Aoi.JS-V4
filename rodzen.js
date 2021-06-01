@@ -2,7 +2,7 @@ const rodzen = require("aoi.js")
 var fs = require('fs')
 const bot = new rodzen.Bot({
     token:process.env.token,
-    prefix:"!!"
+    prefix:"!"
 })
 bot.onJoined()
 bot.onLeave()
@@ -33,6 +33,7 @@ bot.command({
  > !balık tut/kovası/sat - !balık tut | !balık sat | !balık kovası
  > !kumar - !kumar $random[3;150]
  > !rulet - !rulet $random[3;151] 
+ > !satın-al hamburger/araba/ev - !satın-al araba | !satın-al ev | !satın-al hamburger
   `
 })
 bot.command({
