@@ -34,6 +34,7 @@ bot.command({
  > !kumar - !kumar $random[3;150]
  > !rulet - !rulet $random[3;151] 
  > !satın-al hamburger/araba/ev - !satın-al araba | !satın-al ev | !satın-al hamburger
+ > !envanter
   `
 })
 bot.command({
