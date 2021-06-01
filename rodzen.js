@@ -24,51 +24,17 @@ code: `> Prefixim : !
 
 `//message sent to <channel>
 })
-bot.musicStartCommand({
-channel:"$channeID",
-code:``
-})
-bot.musicEndCommand({
-channel:"$channeID",
-code:``
-})
 bot.command({
-  name:"çal",
-  code:`$author[Müzik Çalmaya Başladı;$authorAvatar]
-  $description[Aradığı Müzik: \`$message\`
-  Bulduğum Müzik: [$songInfo[title]]($songInfo[url])
-  Müziğin Süresi: $replaceText[$replaceText[$songInfo[duration];Seconds;Saniye;-1];Seconds;Saniye;-1]
-  Müziğin Kısa Açıklaması: \`$songInfo[description]\`
-  Müziği Açan Kişi: [$usertag]($authorAvatar)]
-  $thumbnail[$songInfo[thumbnail]]
-  $let[$playSong[$message;...;yes;yes;:x: __**|** \`$message\`**|**__ adında bir müzik bulamadım.]]
-$suppressErrors[Şarkı çalmazken kullanamazsın]
-$onlyIf[$voiceID!=;Bir ses kanalına girmezsen kullanamazsın]
-  $argsCheck[>1;Lütfen bir şarkı adı gir]
-  $color[RANDOM]
+  name:"Yardım",
+  code:`
+  __**Ekonomi Komutları**__
+ > !çalış - !çalış
+ > !cüzdan - !cüzdan | !cüzdan <@$authorID>
+ > !balık tut/kovası/sat - !balık tut | !balık sat | !balık kovası
+ > !kumar - !kumar $random[3;150]
+ > !rulet - !rulet $random[3;151] 
   `
 })
-
-bot.command({
-  name:"yardım",
-  code:`$author[Yardım Menüm]
-  $description[$thumbnail[$userAvatar[$clientID]]
-  !çal - \`!çal $randomText[back in black;can bonomo - güneş;duman - elleri ellerime]\` - şarkı çalar.
-  !durdur - Şarkıyı durdurur.
-  !devam - Şarkıyı devam etirir.
-  !geç - Listedeki diğer şarkıya geçer.
-  !ses - \`!ses $random[1;100]\` Şarkının sesini ayarlar.
-  !sıralama - Listedeki şarkıları gösterir.
-  !tekrarla - Şarkıyı sıralar.
-  !şuan-çalan - Şuan çalan şarkının bilgisini verir.
-  !çık - Şarkıyı kapatıp sesten çıkar.
-  !ping - Pingi gösterir.
-  ]
-$color[RANDOM]  
-  $footer[$usertag istedi...]
-  `
-})
-
 bot.command({
   name:"ping",
   code:`
@@ -88,3 +54,11 @@ bot.status({
     status: "dnd",
     time: 12
 })
+
+bot.variables({
+  para:"0",
+  balık:"0",
+  hamburger:"0",
+  araba:"0",
+  ev:"0",
+  })
