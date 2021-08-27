@@ -1,5 +1,5 @@
 module.exports = {
-        name: "eval",//Buraya Kod İsmi Yazılır
+        name: "eval",
         code: `$eval[$message]
         $onlyForIDs[$botOwnerID;Bu komut sadece sahibime özeldir.]
         `

@@ -2,7 +2,7 @@ const rodzen = require("aoi.js")
 var fs = require('fs')
 const bot = new rodzen.Bot({
     token:process.env.token,
-    prefix:"!"
+    prefix:"?"
 })
 bot.onJoined()
 bot.onLeave()
@@ -24,7 +24,7 @@ bot.command({
 })
 
 bot.status({
-    text: `Zuzia RodzeN⁰⁰²`,
+    text: `Zero Two Development`,
     type: "PLAYING",
     status: "dnd",
     time: 12
