@@ -24,7 +24,7 @@ bot.command({
 })
 
 bot.status({
-    text: `Zero Two Development`,
+    text: `Rick Code`,
     type: "PLAYING",
     status: "dnd",
     time: 12
