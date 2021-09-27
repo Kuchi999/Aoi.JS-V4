@@ -1,6 +1,6 @@
-const rodzen = require("aoi.js")
+const morty = require("aoi.js")
 var fs = require('fs')
-const bot = new rodzen.Bot({
+const bot = new morty.Bot({
     token:process.env.token,
     prefix:"?"
 })
