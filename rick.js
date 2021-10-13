@@ -31,5 +31,5 @@ bot.status({
 })
 
 bot.variables({
-değer:""
+rick:"morty"
   })
