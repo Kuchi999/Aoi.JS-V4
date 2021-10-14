@@ -3,14 +3,14 @@ module.exports = {
   code:`
   $setServerVar[ç;false]
 $setServerVar[çsayı;0]
-$setServerVar[çekiliş;boş]
+$setServerVar[çekiliş;]
 $wait[1s]
-$if[$getServerVar[çekiliş]==boş]
+$if[$getServerVar[çsayı]<0]
 Kimse Çekilişe Katılmadığı İçin Çekiliş İptal
 $description[$getServerVar[çsayı] Kişi Katıldı ↗]
 $else
-Çekilişi Kazanan <@$randomText[;$joinSplitText[;]]>
-$textSplit[$getServerVar[çekiliş];,] Tebrikler 🎉
+Çekilişi Kazanan <@$randomText[$joinSplitText[;]]>
+$textSplit[$replaceText[$getServerVar[çekiliş];;$authorID-1];,] Tebrikler 🎉
 https://discord.com/channels/$guildID/$channelID/$get[m]
 $description[$getServerVar[çsayı] Kişi Katıldı ↗]
 $endif

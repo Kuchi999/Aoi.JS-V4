@@ -37,7 +37,7 @@ bot.status({
 
 bot.variables({
 rick:"morty",
-  çekiliş:"boş",
-  çsayı:"0",
+  çekiliş:"$clientID",
+ çsayı:"0",
   ç:"false",
   })
