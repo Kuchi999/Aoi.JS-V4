@@ -15,7 +15,12 @@ for(const file of reader) {
         code: command.code
     })
 }
-
+bot.awaitedCommand({
+  name:"çekiliş",
+  code:`$setServerVar[çekiliş;$authorID,$getServerVar[çekiliş]]
+  $setServerVar[çsayı;$sum[$getServerVar[çsayı];1]]
+  `
+})
 bot.command({
   name:"ping",
   code:`
@@ -31,5 +36,8 @@ bot.status({
 })
 
 bot.variables({
-rick:"morty"
+rick:"morty",
+  çekiliş:"boş",
+  çsayı:"0",
+  ç:"false",
   })
