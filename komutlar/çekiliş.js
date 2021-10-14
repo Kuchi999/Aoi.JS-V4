@@ -3,17 +3,19 @@ module.exports = {
   code:`
   $setServerVar[ç;false]
 $setServerVar[çsayı;0]
-$setServerVar[çekiliş;]
+$setServerVar[çekiliş;$clientID]
 $wait[1s]
-$if[$getServerVar[çsayı]<0]
-Kimse Çekilişe Katılmadığı İçin Çekiliş İptal
+$if[$get[k]==$clientID]
+Bir Hata Oldu Ya Da Çekilişe Kimse Katılmadı
+Eğer Bir Hata Olduysa Yetkili Biri ?yeniden-çek $repalceText[$getServerVar[çekiliş];$clientID;;-1] komutunu kullansın.
 $description[$getServerVar[çsayı] Kişi Katıldı ↗]
 $else
-Çekilişi Kazanan <@$randomText[$joinSplitText[;]]>
-$textSplit[$replaceText[$getServerVar[çekiliş];;$authorID-1];,] Tebrikler 🎉
+Çekilişi Kazanan <@$get[k] Tebrikler 🎉
 https://discord.com/channels/$guildID/$channelID/$get[m]
 $description[$getServerVar[çsayı] Kişi Katıldı ↗]
 $endif
+$let[k;$randomText[$joinSplitText[;]]>
+$textSplit[$getServerVar[çekiliş];,]]
  $clearReactions[$channelID;$get[m];🎉]
 $wait[$message[1]]
 $reactionCollector[$get[m];everyone;$message[1];🎉;çekiliş;no]
