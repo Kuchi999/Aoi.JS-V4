@@ -17,51 +17,7 @@ for(const file of reader) {
 }
 
 
-bot.awaitedCommand({
-  name:"sag",
-  code:`$editMessage[$getServerVar[help;$authorID];{author:$client[name] Yardım Menüsü}
- {description:
- ?ping
- ?test1
- ?test2
- ?test3
- ?test4
- 
- Sayfa: 3/3
- 
- }{footer:Rick Code}]
-  `
-})
-bot.awaitedCommand({
-  name:"orta",
-  code:`$editMessage[$getServerVar[help;$authorID];{author:$client[name] Yardım Menüsü}
- {description:
- ?ping
- ?test1
- ?test2
- ?test3
- ?test4
- 
- Sayfa: 2/3
- 
- }{footer:Rick Code}]
-  `
-})
-bot.awaitedCommand({
-  name:"sol",
-  code:`$editMessage[$getServerVar[help;$authorID];{author:$client[name] Yardım Menüsü}
- {description:
- ?ping
- ?test1
- ?test2
- ?test3
- ?test4
- 
- Sayfa: 1/3
- 
- }{footer:Rick Code}]
-  `
-})
+
 bot.command({
   name:"ping",
   code:`
@@ -78,8 +34,4 @@ bot.status({
 
 bot.variables({
 rick:"morty",
-  çekiliş:"$clientID",
- çsayı:"0",
-  ç:"false",
-  help:"",
   })
