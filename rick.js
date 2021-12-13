@@ -58,7 +58,7 @@ name:"reroll",
 prototype:"button",
 code:`$editmessage[$get[e];{author:🎉 Çekiliş (YENİDEN ÇEKİLDİ) 🎉:}{thumbnail:$servericon}{title:$get[prize]}{description:**Çekilişi Başlatan: By#COLON#** <@$authorid>\n**Tekrar Çekildi Yeni Kazanan:** <@$get[winner]>\n**Bitiş Tarihi** <t:$truncate[$divide[$get[endstamp];1000]]:R>\n\n**$get[participated]** 
 Kullanıcı bu çekilişe katıldı}{footer:Bitiş Tarihi:}{timestamp:$get[endstamp]}{color:BLUE}]
-$sendmessage[**Tebrikler** <@$get[winner]>! Tekrar çekildi ve sen kazandın!\n **Ödülün:** \`$get[prize]\`;no]
+$sendmessage[**Tebrikler** <@$get[winner]> Tekrar çekildi ve sen kazandın!\n **Ödülün:** \`$get[prize]\`;no]
 $onlyif[$get[winner]!=;Katılım eksikliği nedeniyle kazanan belirlenmedi]
 $setmessagevar[ended;true;$get[e]]
 $let[winner;$randomtext[$joinsplittext[;]]]
@@ -77,9 +77,10 @@ $let[msg;$interactiondata[message.id]]`})
 bot.interactionCommand({
 name:"end",
 prototype:"button",
-code:`$editmessage[$get[e];{author:🎉 GIVEAWAY (FORCE ENDED) 🎉:}{thumbnail:$servericon}{title:$get[prize]}{description:**Çekilişi Başlatan: By#COLON#** <@$authorid>\n**Çekiliş Bitti Kazanan:** <@$get[winner]>\n**Bitiş Tarihi** <t:$truncate[$divide[$get[endstamp];1000]]:R>\n\n**$get[participated]** Users had joined this giveaway}{footer:Ended at:}{timestamp:$get[endstamp]}{color:BLUE}]
-$sendmessage[Congratulations <@$get[winner]>! You won the giveaway(force ended) of **$get[prize]**;no]
-$onlyif[$get[winner]!=;No winner decided due to lack of participation]
+code:`$editmessage[$get[e];{author:🎉 Çekiliş (SONA ERDİRİLDİ) 🎉:}{thumbnail:$servericon}{title:$get[prize]}{description:**Çekilişi Başlatan: By#COLON#** <@$authorid>\n**Çekiliş Sona Erdirildi Kazanan:** <@$get[winner]>\n**Bitiş Tarihi** <t:$truncate[$divide[$get[endstamp];1000]]:R>\n\n**$get[participated]** 
+Kullanıcı bu çekilişe katıldı}{footer:Bitiş Tarihi:}{timestamp:$get[endstamp]}{color:BLUE}]
+$sendmessage[**Tebrikler** <@$get[winner]> Sen kazandın!\n **Ödülün:** \`$get[prize]\`;no]
+$onlyif[$get[winner]!=;Katılım eksikliği nedeniyle kazanan belirlenmedi]
 $setmessagevar[ended;true;$get[e]]
 $let[winner;$randomtext[$joinsplittext[;]]]
 $removetextsplitelement[$gettextsplitlength]
@@ -87,7 +88,7 @@ $textsplit[$getmessagevar[joinedusers;$get[e]];@]
 $let[participated;$getmessagevar[joined;$get[e]]]
 $let[e;$get[msg]]
 $onlyif[$get[condition]==perform;]
-$interactionreply[$replacetext[$replacetext[$replacetext[$get[condition];perform;Ended the giveaway];true;This giveaway has already ended];false;You do not have enough perms];;;64]
+$interactionreply[$replacetext[$replacetext[$replacetext[$get[condition];perform;Çekiliş Bitirildi];true;Bu çekiliş zaten bitmiş];false;Yeterli iznin yok.];;;64]
 $let[condition;$replacetext[$replacetext[$getmessagevar[ended;$get[msg]];false;$replacetext[$replacetext[$get[condition];true;perform];false;false]];true;$get[condition]]]
 $let[condition;$hasperms[$authorid;manageserver]]
 $let[host;$getmessagevar[hoster;$get[msg]]]
